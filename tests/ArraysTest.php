@@ -25,19 +25,19 @@ final class ArraysTest extends TestCase
         assertEquals('carlos@correo.com', $userEmail);
      }
 
-    // public function testArrayMultidimensional(): void
-    // {
-    //     // Consigue los datos que se piden en los asserts
-    //     $users = [
-    //       ['name' => 'Carlos', 'email' => 'carlos@correo.com', 'city' => 'Benalmádena'],
-    //       ['name' => 'Carmen', 'email' => 'carmen@correo.com', 'city' => 'Fuengirola'],
-    //       ['name' => 'Carmelo', 'email' => 'carmelo@correo.com', 'city' => 'Torremolinos'],
-    //       ['name' => 'Carolina', 'email' => 'carolina@correo.com', 'city' => 'Málaga'],
-    //     ]; 
+     public function testArrayMultidimensional(): void
+     {
+        // Consigue los datos que se piden en los asserts
+        $users = [
+          ['name' => 'Carlos', 'email' => 'carlos@correo.com', 'city' => 'Benalmádena'],
+          ['name' => 'Carmen', 'email' => 'carmen@correo.com', 'city' => 'Fuengirola'],
+          ['name' => 'Carmelo', 'email' => 'carmelo@correo.com', 'city' => 'Torremolinos'],
+          ['name' => 'Carolina', 'email' => 'carolina@correo.com', 'city' => 'Málaga'],
+        ]; 
 
-    //     assertEquals('carlos@correo.com', '');
-    //     assertEquals('Torremolinos', '');
-    //     assertEquals('Carmen', '');
-    // }
+        assertEquals('carlos@correo.com', $users[0]['email']);
+        assertEquals('Torremolinos', $users[2]['city']);
+        assertEquals('Carmen', $users[1]['name']);
+     }
 
 }
