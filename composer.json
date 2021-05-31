@@ -1,0 +1,13 @@
+{
+    "name": "maria/php-1-exercices",
+    "authors": [
+        {
+            "name": "Maria Gomez",
+            "email": "maria_gg86@yahoo.es"
+        }
+    ],
+    "require": {},
+    "require-dev": {
+        "phpunit/phpunit": "^9.5"
+    }
+}
