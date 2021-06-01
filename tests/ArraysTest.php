@@ -23,10 +23,10 @@ final class ArraysTest extends TestCase
         $userEmail = $user['email'];
 
         assertEquals('carlos@correo.com', $userEmail);
-     }
+    }
 
-     public function testArrayMultidimensional(): void
-     {
+    public function testArrayMultidimensional(): void
+    {
         // Consigue los datos que se piden en los asserts
         $users = [
           ['name' => 'Carlos', 'email' => 'carlos@correo.com', 'city' => 'Benalmádena'],
@@ -38,6 +38,6 @@ final class ArraysTest extends TestCase
         assertEquals('carlos@correo.com', $users[0]['email']);
         assertEquals('Torremolinos', $users[2]['city']);
         assertEquals('Carmen', $users[1]['name']);
-     }
+    }
 
 }
