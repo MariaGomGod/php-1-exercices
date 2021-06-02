@@ -11,7 +11,9 @@
     <p>Hoy es 
     <strong>
         <?php
-            
+         
+         $today = getdate();
+         echo $today['weekday'];
 
         ?>
     </strong>. ¿Qué tal estás?</p>
