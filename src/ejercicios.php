@@ -51,3 +51,10 @@ function averageAge(array $people): float {
 
     return $average;
 }
+
+// EjercicioReverseTest
+
+function reverseString(string $input): string {
+    
+    return strrev($input);
+}
