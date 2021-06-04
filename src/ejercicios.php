@@ -56,5 +56,37 @@ function averageAge(array $people): float {
 
 function reverseString(string $input): string {
     
-    return strrev($input);
+    $reverse = '';
+
+    for($i = strlen($input)-1; $i >= 0; $i--) {
+        $reverse .= $input[$i];
+    }
+    
+    return $reverse;
+}
+
+function reverseWords(string $input): string {
+    
+    $reverse = '';
+    $words = explode(' ', $input);
+
+    for($i = count($words)-1; $i >= 0; $i--) {
+        $reverse .= ' ';
+        $reverse .= $words[$i];
+    }
+    
+    return substr($reverse, 1);
+}
+
+function reverseCharactersInWords(string $input): string {
+    
+    $reverse = '';
+    $words = explode(' ', $input);
+
+    for($i = 0; $i <= count($words)-1; $i++) {
+        $reverse .= ' ';
+        $reverse .= reverseString($words[$i]);
+    }
+    
+    return substr($reverse, 1);
 }

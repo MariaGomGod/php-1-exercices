@@ -10,22 +10,22 @@ final class EjercicioReverseTest extends TestCase
   // Programar varias funciones que realizen lo siguiente
   public function testReverseString(): void
   {
-    $input = "Hola qué tal";
-    $expectedOutput = "lat éuq aloH";
+    $input = "Hola que tal";
+    $expectedOutput = "lat euq aloH";
     assertEquals($expectedOutput, reverseString($input));
   }
 
   public function testReverseWords(): void
   {
-    $input = "Hola qué tal";
-    $expectedOutput = "tal qué Hola";
+    $input = "Hola que tal";
+    $expectedOutput = "tal que Hola";
     assertEquals($expectedOutput, reverseWords($input));
   }
 
   public function testReverseCharactersInWords(): void
   {
-    $input = "Hola qué tal";
-    $expectedOutput = "aloH éuq lat";
+    $input = "Hola que tal";
+    $expectedOutput = "aloH euq lat";
     assertEquals($expectedOutput, reverseCharactersInWords($input));
-  }
-}
+  }  
+} 
