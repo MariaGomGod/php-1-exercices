@@ -9,6 +9,10 @@ $people = [
 
 ?>
 
+<?php
+require 'employess_'.(isset($_GET['format']) ? $_GET['format'] : 'html').'.php'
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
