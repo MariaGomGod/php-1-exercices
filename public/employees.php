@@ -1,8 +1,9 @@
 <?php
 require $_SERVER['DOCUMENT_ROOT'] . '/lib/app.php';
 
- $query = 'SELECT * FROM employees';
-if (isset($_GET['id'])) {
+$query = 'SELECT * FROM employees';
+
+if (isset($_GET['id'])) { // isset() comprueba si una variable está definida o no en el script de PHP que se está ejecutando
     $query = 'SELECT * FROM employees WHERE id = :identificador';
 } elseif (isset($_GET['email'])) {
     $query = 'SELECT * FROM employees WHERE email = :correo';
