@@ -28,10 +28,10 @@
         <tbody>
             <?php foreach ($people as $person) : ?>
                 <tr>
-                    <td><?php echo $person['name']; ?></td>
-                    <td><?php echo $person['email']; ?></td>
-                    <td><?php echo $person['age']; ?></td>
-                    <td><?php echo $person['city']; ?></td>
+                    <td><?php echo $person['id'] ?></td>
+                    <td><?php echo $person['name'] ?></td>
+                    <td><a href="/employees.php?id=<?= $person['id']?>"><?= $person['email']?></a></td>
+                    <td><?php echo $person['city'] ?></td>
                 </tr>
             <?php endforeach; ?>
         </tbody>
