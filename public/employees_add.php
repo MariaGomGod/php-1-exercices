@@ -17,7 +17,7 @@ $stm->bindParam(':correo', $_POST['email']);
 $stm->bindParam(':edad', $_POST['age']);
 $stm->bindParam(':ciudad', $_POST['city']); */
 
-$stm->execute(); // excute() ejecuta la consulta
+$stm->execute($params); // execute() ejecuta la consulta
 
 header('Location: /employees.php?message' . urlencode(('El usuario ' .$_POST['email'].' se ha añadido correctamente.')));
 
