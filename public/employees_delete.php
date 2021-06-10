@@ -4,7 +4,7 @@ require $_SERVER['DOCUMENT_ROOT'] . '/lib/app.php';
 
 $body = file_get_contents('php://input'); // leemos el cuerpo (body) de la solicitud http
 
-$person = json_decode($body, true); // json_decode () convierte un objeto json en un objeto PHP
+$person = json_decode($body, true); // json_decode () decodifica un string de JSON
 
 $query = 'DELETE FROM employees WHERE id = :identificador';
 
@@ -19,6 +19,6 @@ $response = [
     'message' => $stm->rowCount() === 0 ? 'No hemos eliminado a nadie' : 'He eliminado '.$stm->rowCount(). ' fila',
 ];
 
-echo json_encode($response); // json_encode() permite convertir datos PHP en formato json
+echo json_encode($response); // json_encode() retorna la representación JSON del valor dado
 
 exit();
