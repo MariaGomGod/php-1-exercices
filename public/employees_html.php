@@ -54,11 +54,17 @@
         <label for="age">Edad</label>
         <input type="number" id="age" name="age" required/>
         <br/>
+        <label for="city">Ciudad</label>
+        <input type="city" id="city" name="city" required/>
+        <br/>
         <label for="archivo">Archivo</label>
         <input type="file" id="archivo" name="archivo" />
         <hr/>
         <input type="submit" value="Enviar"/>
     </form>
+    <?php
+    require("./footer.php");
+    ?>
 </body>
 
 </html>
