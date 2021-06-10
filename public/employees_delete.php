@@ -12,7 +12,7 @@ $stm = $dbConnexion->prepare($query);
 $stm->bindParam(':identificador', $person['id']);
 $stm->execute();
 
-$result = $stm->rowCount();
+$result = $stm->rowCount(); // rowCount() te dice cuántas filas han sido afectadas en una consulta
 
 $response = [
     'status' => $stm->rowCount() === 0 ? 'error' : 'success',
