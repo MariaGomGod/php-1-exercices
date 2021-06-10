@@ -47,7 +47,7 @@
     if (isset($_GET['id'])) {
         $query = 'SELECT * FROM employees WHERE id = :identificador';
         $stm = $dbConnexion->prepare($query);
-        $stm->bindParam(':identifiador', $_GET['id']);
+        $stm->bindParam(':identificador', $_GET['id']);
         $stm->execute();
         $currentPerson = $stm->fetch(PDO::FETCH_ASSOC);
     } elseif (isset($_GET['email'])) {
