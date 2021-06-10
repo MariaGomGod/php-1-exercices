@@ -1,6 +1,7 @@
 <?php
 require $_SERVER['DOCUMENT_ROOT'] . '/lib/app.php';
 
+// Esta query es para el listado
 $query = 'SELECT * FROM employees';
 
 if (isset($_GET['id'])) { // isset() comprueba si una variable está definida o no en el script de PHP que se está ejecutando
@@ -10,15 +11,15 @@ if (isset($_GET['id'])) { // isset() comprueba si una variable está definida o 
 }
 $stm = $dbConnexion->prepare($query); // prepare() es para evitar la inyección de sql
 
- if (isset($_GET['id'])) {
+if (isset($_GET['id'])) {
      $stm->bindParam(':identificador', $_GET['id']); // con bindParam() sustituimos "identificador" por el parámetro que yo le pase, en este caso "id"
- } elseif (isset($_GET['email'])) {
+} elseif (isset($_GET['email'])) {
      $stm->bindParam(':correo', $_GET['email']);
- }
+}
 
- $stm->execute();
+$stm->execute();
 
- $people = $stm->fetchAll(PDO::FETCH_ASSOC);
+$people = $stm->fetchAll(PDO::FETCH_ASSOC);
 ?>
 <?php
 
