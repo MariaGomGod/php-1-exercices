@@ -15,6 +15,7 @@ require $_SERVER['DOCUMENT_ROOT'] . '/lib/app.php';
     <?php if($_SESSION['last_visit_time']):?>
         <h4><?= $_SESSION['last_visit_time']; ?></h4>
     <?php endif; ?>
+    <?php setcookie('phpexercise', time()); ?>
     <pre>$_COOKIE: <?php print_r($_COOKIE); ?></pre>
     
     <?php
