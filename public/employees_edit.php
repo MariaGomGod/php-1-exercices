@@ -15,7 +15,7 @@ $params = [
 ];
 
 
-$stm = $dbConnection->prepare($query);
+$stm = $dbConnexion->prepare($query);
 
 $stm->execute($params);
 

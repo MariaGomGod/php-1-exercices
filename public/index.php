@@ -11,7 +11,12 @@ require $_SERVER['DOCUMENT_ROOT'] . '/lib/app.php';
     <title>Document</title>
 </head>
 <body>
-
+    <?php include $_SERVER['DOCUMENT_ROOT'] . '/partial/header.php'; ?>
+    <?php if($_SESSION['last_visit_time']):?>
+        <h4><?= $_SESSION['last_visit_time']; ?></h4>
+    <?php endif; ?>
+    <pre>$_COOKIE: <?php print_r($_COOKIE); ?></pre>
+    
     <?php
     require("./links.php");
     ?>
